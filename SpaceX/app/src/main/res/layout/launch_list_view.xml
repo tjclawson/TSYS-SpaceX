@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cv_list_parent">
+    android:id="@+id/cv_list_parent"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,39 +18,40 @@
             android:src="@mipmap/ic_launcher"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp"/>
 
         <TextView
             android:id="@+id/tv_list_mission_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_list_launch_image"/>
+            app:layout_constraintStart_toEndOf="@+id/iv_list_launch_image"
+            android:layout_margin="8dp"/>
 
         <TextView
             android:id="@+id/tv_list_rocket_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="rocket name"
             app:layout_constraintTop_toBottomOf="@+id/tv_list_mission_name"
-            app:layout_constraintStart_toEndOf="@+id/iv_list_launch_image"/>
+            app:layout_constraintStart_toEndOf="@+id/iv_list_launch_image"
+            android:layout_margin="8dp"/>
 
         <TextView
             android:id="@+id/tv_list_site_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="site"
             app:layout_constraintTop_toBottomOf="@+id/tv_list_rocket_name"
-            app:layout_constraintStart_toEndOf="@+id/iv_list_launch_image"/>
+            app:layout_constraintStart_toEndOf="@+id/iv_list_launch_image"
+            android:layout_margin="8dp"/>
 
         <TextView
             android:id="@+id/tv_list_launch_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="date"
             app:layout_constraintTop_toBottomOf="@+id/tv_list_site_name"
-            app:layout_constraintStart_toEndOf="@id/iv_list_launch_image"/>
+            app:layout_constraintStart_toEndOf="@id/iv_list_launch_image"
+            android:layout_margin="8dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
