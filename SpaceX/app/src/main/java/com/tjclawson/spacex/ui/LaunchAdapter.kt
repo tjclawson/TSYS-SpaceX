@@ -1,4 +1,4 @@
-package com.tjclawson.spacex
+package com.tjclawson.spacex.ui
 
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import com.tjclawson.spacex.R
 import com.tjclawson.spacex.model.Launch
 import kotlinx.android.synthetic.main.launch_list_view.view.*
 
