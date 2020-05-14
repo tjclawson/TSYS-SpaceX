@@ -4,6 +4,7 @@ import com.tjclawson.spacex.model.Launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface SpaceXApiService {
 
@@ -27,5 +28,5 @@ interface SpaceXApiService {
     }
 
     @GET("launches/past")
-    suspend fun getPastLaunches(): MutableList<Launch>
+    suspend fun getPastLaunches(@Query("order") order: String): MutableList<Launch>
 }

@@ -31,7 +31,8 @@ class LaunchAdapter(private val onItemClicked: (position: Int) -> Unit)
         holder.missionNameView.text = data.missionName
         holder.rocketNameView.text = data.rocket.rocketName
         holder.siteNameView.text = data.launchSite.siteName
-        holder.launchDateView.text = data.launchDateLocal
+        // Splits UTC string format to just show YYYY-MM-DD
+        holder.launchDateView.text = data.launchDateLocal.split("T")[0]
         Picasso.get().load(data.links.missionPatchSmall).into(holder.launchImageView)
 
         // highlights launch if it has been selected
@@ -49,7 +50,6 @@ class LaunchAdapter(private val onItemClicked: (position: Int) -> Unit)
     // takes new list, sorts by unix time descending so launches are listed from newest to oldest
     // then clears launchList and adds new list
     fun submitList(list: MutableList<Launch>) {
-        list.sortByDescending { it.launchDateUnix }
         launchList.clear()
         launchList.addAll(list)
         notifyDataSetChanged()
